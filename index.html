@@ -1,0 +1,808 @@
+﻿<!DOCTYPE>
+<html lang="cs">
+<head>
+<meta charset="utf-8" />
+<title>Mateřská škola sv.Voršily v Praze</title>
+<!-- Include the basic styles -->
+<link type="text/css" rel="Stylesheet" href="js/slider/css/basic-jquery-slider.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+<script  type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script> 
+<script  type="text/javascript" src="js/scripts.js"></script>
+<script  type="text/javascript" src="js/jquery-easing-compatibility.1.2.pack.js"></script>
+<script  type="text/javascript" src="js/jquery-easing.1.2.pack.js"></script>
+
+<!-- Include the plugin *after* the jQuery library -->
+<script src="js/slider/js/basic-jquery-slider.js"></script>
+ 
+
+
+<script>
+var links = [];
+$(document).ready(function(){
+
+
+	$('#sliderc').bjqs({
+		'width' : 790,
+		'height' : 228,
+		  'animationDuration' : 1200,
+		  'rotationSpeed': 6000,
+		    'showMarkers' : false,
+		    'centerMarkers' : false,
+		    'centerControls' :true,
+		    'nextText': '<i class="icon-r"></i>',
+		    'prevText': '<i class="icon-l"></i>',
+		    'useCaptions' : false,
+		    'keyboardNav' : true
+	});
+	
+	$(".link").each(function(){
+		if (jQuery.inArray($(this).attr("data-url"), links) == -1)
+			links[links.length] = $(this).attr("data-url");
+	});
+	
+	$(".link").bind("click", function(){
+		for (var x=0;x<links.length;x++) {
+		  $("#" + links[x]).hide();	
+		}
+		 $("#" + $(this).attr("data-url")).show();	
+		 if ($(this).attr("data-url") != "home") $('body').animate({scrollTop : 350},'slow');
+		 
+		 if ($(this).attr("data-url") == "kontakt") initialize();
+	})
+	
+});
+	
+</script>
+</head>
+<body>
+<div id="infoB" style="position:absolute;top:50%;left:50%;width:500px;border:6px solid white;font-size:20px;margin-left:-250px;text-align:center;background:#621a2e;z-index:999;padding:20px;">
+
+<br >
+
+Milí rodiče,
+ 
+přejeme vám krásné, společně strávené prázdniny a  našim budoucím prvňáčkům hodně úspěchů a  dobré kamarády v ZŠ.
+ 
+Děkujeme všem podporujícím rodičům za společné, příjemně strávené chvíle a za pomoc a dary, které jste nám během roku  poskytovali.
+ 
+Těšíme se na vás opět v pondělí 2. září 2013.
+ 
+Vše dobré na vaší prázdninové cestě za celý kolektiv přeje
+ 
+<br > 
+Anna Luňáčková
+ředitelka školy 
+<br ><br >                                                                         
+                                                   
+                       
+
+
+
+<br>
+
+<br> <a href="javascript:$('#infoB').hide();void(0);">Zavřít</a>
+</div>
+<div class="wrap">
+	<div class="header">
+    	<div class="logo"><a href="#" data-url="home" class="link" ><img src="images/web_logo.gif" alt="" title="" border="0" /></a></div>
+        
+        <div id="menu">
+            <ul>         
+            <li ><a href="#" data-url="onas" class="link" >O nás</a></li>
+            <li class="divider"></li>                                                              
+            <li ><a href="#" data-url="aktivity" class="link" >Aktivity</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-url="vprogram" class="link" >Vzdělávací program</a></li>
+            <li class="divider"></li>
+            <li>
+            <a href="#" data-url="dokumenty" class="link" >Dokumenty</a> 
+            </li>
+            <li class="divider"></li>
+            <li><a href="#" data-url="jidelna" class="link" >Školní jídelna</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-url="foto" class="link" >Fotogalerie</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-url="kontakt" class="link" >Kontakt</a></li>
+            </ul>
+        </div>
+           
+    </div> <!--End of header-->
+    
+    
+    <div class="banner_content">
+  <div class="slider_content">	     
+     
+		<div class="featured-arrow"  id="stripNavL0">
+			<a href="#" class="bjqs-prev"></a>    
+		</div>
+
+
+        <div id="slider">
+               <div class="slider-wrap">
+                    <div id="sliderc" class="csw">
+                    <ul class="bjqs">
+<li><img src="images/1.JPG" alt="" title="" border="0" /></li>
+<li><img src="images/2.JPG" alt="" title="" border="0" /></li>
+<li><img src="images/3.JPG" alt="" title="" border="0" /></li>
+<li><img src="images/4.JPG" alt="" title="" border="0" /></li>
+<li><img src="images/5.JPG" alt="" title="" border="0" /></li>
+<li><img src="images/6.JPG" alt="" title="" border="0" /></li>
+<li><img src="images/7.JPG" alt="" title="" border="0" /></li>
+<li><img src="images/8.JPG" alt="" title="" border="0" /></li>
+<li><img src="images/9.JPG" alt="" title="" border="0" /></li>
+<li><img src="images/10.JPG" alt="" title="" border="0" /></li>
+</ul>
+            
+                    </div>
+              </div>
+        </div>
+
+		<div class="featured-arrow" id="stripNavR0">
+			<a href="#" class="bjqs-next"></a>
+        </div>
+
+        <div class="clear"></div>
+</div> <!--end of slider content-->
+    
+    
+    </div> <!--End of banner_content-->
+    
+    <div class="main_content">
+    
+    	<!-- HOME -->
+    		<div class="left_content" id="home">
+            	<h1> Mateřská škola sv. Voršily v Praze</h1>
+                
+                     
+                <div class="services_block">
+					<img src="images/icon2.gif" alt="" title="" border="0" class="icon_left" />
+                    <div class="services_details">
+                    <h2>Příspěvek, stravné a přeplatky</h2>
+                    <p>
+                       Aktuální výše <a href="#" data-url="platby" class="link">příspěvku a stravného</a> pro rok 2012/2013 školky sv. Voršily.
+                       Naleznete zde i přeplatky za minulá období.
+                    </p>                    
+                    </div>
+                </div> 
+                
+                <div class="services_block">
+					<img src="images/icon3.gif" alt="" title="" border="0" class="icon_left" />
+                    <div class="services_details">
+                    <h2>Aktivity</h2>
+                    <p>
+                    Plavání, keramika, taneční kroužek a další naleznete v sekci <a href="#" data-url="aktivity" class="link">Aktivity</a>. Přihlašte své děti do kroužku pořadaného Mateřskou školkou sv. Voršily.
+                    <br />   
+                    </p>                    
+                    </div>
+                </div> 
+                
+                <div class="services_block">
+					<img src="images/icon4.gif" alt="" title="" border="0" class="icon_left" />
+                    <div class="services_details">
+                    <h2>Divadla, Koncerty, Výstavy</h2>
+                    <p>
+                     Prohlédněte si seznam aktuálních akcí na nejbližší období <a href="#" data-url="divadla" class="link">zde</a>.
+                    </p>                    
+                    </div>
+                </div> 
+                
+                
+                <div class="testimonials">
+                
+                    <h1>  </h1>
+                    
+                    <div class="testimonials_block">
+                        <img src="images/icon5.gif" alt="" title="" border="0" class="icon_left" />
+                        <div class="testimonials_details">
+                        <h2>Motto:</h2>
+                        <p>
+                       Nemůžeme všechny děti naučit všechno, ale můžeme je učinit šťastnými.
+                        </p>                    
+                        </div>
+                    </div> 
+                
+                </div> 
+                
+                
+                
+			</div>
+            <!-- END HOME -->
+            
+                    <!-- PRISPEVKY -->
+    		<div class="left_content" id="platby" style="display:none">
+    	<h2>Měsíční příspěvek a stravné</h2>
+    	                                                                     
+<p> Termín :         úterý      18.června 2013</p>
+
+<p>
+
+<strong>od 12,30 hod. do 17,00 hod. –v době spaní dětí 13,00-15,00 jen v nutném případě</strong>
+</p>
+
+
+Měsíční příspěvek :<strong> 1400,</strong>-Kč <br >
++<br >
+Stravné :        <br >        
+Polodenní <strong>28,-(31,-)</strong>Kč<br >
+Celodenní <strong>35,-(38,-)</strong>Kč
+<br ><br >
+stravné viz. <a href="#" data-url="jidelna" class="link" >školní jídelna</a>
+
+<pre>
+
+účet:       1932459369/0800  / na platbu příspěvku 1400,-Kč/
+podúčet: 35-1932459369/0800  / na platbu za stravného/ 
+variabilní symbol      : datum narození dítěte
+zpráva pro příjemce    : jméno dítěte
+termín                 : 5.dne v měsíci (bez července a srpna)
+</pre> 
+
+ <p>
+ Platí se záloha do konce měsíce při každodenní docházce.Tato záloha bude vyúčtována podle skutečné docházky při platbě v dalším měsíci.
+Částky k placení budou vyvěšeny na nástěnce v mezipatře ve čtvrtek 13.6.2013
+</p>
+Děkuji         <br >                                                                               
+                                                              Jana Krausová,hospodářka ŠJ 
+                                                              
+                                                              
+
+
+
+<br > 
+<br >  
+    	</div>
+            <!-- END PRISPEVKY -->
+            <!-- DIVADLA -->
+    		<div class="left_content" id="divadla" style="display:none">
+    	<h2>Divadla, Koncerty, Výstavy</h2>
+    	
+    	<!-- VANDI DIVADLA TABULKA -->
+ ¨
+
+
+
+
+   
+   	
+	<!-- END VANDI DIVADLA TABULKA -->
+    	
+    	</div>
+            <!-- END DIVADLA -->
+            
+            <!-- O NAS -->
+    		<div class="left_content" id="onas" style="display:none">
+    	<h2>O nás</h2> 
+    	
+    	<ul>
+
+<li> <strong>Zřizovatel: <a href="http://www.ursulines-ur.org">Českomoravská provincie Římské unie řádu sv. Voršily</a></strong></li>
+<li>Ostrovní 11</li>
+<li>110 00 Praha 1</li>
+
+<li>IČ: <strong>49625918</strong></li>
+<li>DIČ: <strong>CZ49625918</strong></li>
+<li>Bankovní spoj.: <strong>Česká spořitelna a.s., Praha</strong> </li>
+<li>Číslo účtu: <strong>1932459369/0800</strong></li>
+
+<li>Právní forma: <strong>ŠPO</strong> ( školská právnická osoba )</li>
+
+<li>Ředitelka: <strong>Anna Luňáčková</strong> </li>
+
+
+<li><strong>Typ:</strong></li>
+<li>předškolní zařízení s celodenním provozem </li>
+<li>Provozní doba 7:00 - 17:00 hodin </li>
+<li><strong>Počet tříd:</strong></li>
+<li>1. tř. <strong>Broučci</strong> / u nově příchozích dětí lze využít adaptační režim s individuálním
+přístupem k dítěti /</li>
+
+<li>2. tř. <strong>Hvězdičky</strong> / program je zaměřen na rozvoj estetických dovedností,
+tvořivosti a sociálních vztahů / </li>
+<li><strong>Kde nás najdete:</strong></li>
+<li>v centru Prahy, nedaleko stanice tramvaje Národní divadlo. <a href="http://maps.google.cz/maps?f=q&amp;source=s_q&amp;hl=cs&amp;geocode=&amp;q=Ostrovn%C3%AD+11,+110+00+Praha+1&amp;sll=49.930008,15.369873&amp;spn=4.717328,12.095947&amp;ie=UTF8&amp;hq=&amp;hnear=Ostrovn%C3%AD+139%2F11,+110+00+Praha+1-Nov%C3%A9+M%C4%9Bsto&amp;z=16" target="_blank">Mapa</a>.</li> 
+<li>Spojení tramvaj číslo: 6, 9, 17, 18, 21, 22, 23 </li>
+<li>Kapacita školy 52 dětí</li>
+
+<li><strong>Provoz školy</strong></li> 
+
+<li><strong>Ráno:</strong></li> 
+<li>Dítě předávejte osobně učitelce od 7:00 do 8:30 hod. </li> 
+<li>Pozdnější příchody nahlaste předem  osobně,  telefonicky(+420 224 930 861) nebo pomocí SMS na číslo (+420 775 338 743 ), jinak je narušen program a práce s dětmi. </li> 
+
+<li><strong>Odpoledne:</strong></li> 
+<li>Od 12:30 do 13:00 si můžete vyzvednout dítě, které jde po obědě domů. </li> 
+
+<li>Provoz MŠ končí v 17:00 hod. Jestliže se z vážných důvodů nedostavíte pro dítě včas - neprodleně kontaktujte MŠ. Po 17:00 hod. je péče o Vaše dítě za úplatu.</li> 
+
+<li><strong>Absence dítěte:</strong></li> 
+<li>Prosíme rodiče, aby své dítě omluvili nejpozději do 8:00 hod. ráno osobně,  telefonicky(+420 224 930 861) nebo pomocí SMS (+420 775 338 743)
+. Neomluveným dětem se započítává stravné. </li> 
+
+<li>Nepřítomnost dítěte delší 14 dnů je nutné zaslat písemnou formou na adresu:</li> 
+<li>MŠ sv Voršily v Praze</li> 
+<li>Ostrovní 11, 110 00 Praha 1</li> 
+<li>nebo e-mailem: <a href="cmsostrovni@tiscali.cz">cmsostrovni@tiscali.cz</a> </li> 
+
+
+<li><strong>Financování školy:</strong></li> 
+
+<li>Státní dotace Ministerstva školství mládeže a tělovýchovy v Praze pokrývá pouze základní provozní náklady.</li> 
+<li>Dovybavování, modernizace interiéru, učební pomůcky, údržba zahrady pro děti V Jirchářích jsou hrazeny z příspěvků od rodičů dětí a eventuelních dárců.</li> 
+<li>Vážení rodiče, za jakékoliv dary, které můžete poskytnout dětem MŠ navíc, Vám budeme velmi vděčni.</li>  
+
+<li><strong>Tímto bych chtěla srdečně poděkovat všem rodičům, kteří nás v minulých letech finančně a materiálně podpořili.</strong> </li>
+<li>
+  <p><strong> </strong></p>
+</li> 
+
+
+<li><strong>V Praze 2012</strong></li> 
+<li><strong>Anna Luňáčková, ředitelka MŠ</strong></li> 
+
+
+</ul>
+
+    		</div>	
+    		<!-- END ONAS -->
+    
+    		<!-- AKTIVITY-->
+    		<div class="left_content" id="aktivity" style="display:none">
+    			<h2>Aktivity</h2>
+    			
+    			<ul>
+<li>
+  <p><strong>Tradice  školy:</strong></p>
+  <ul>
+    <li>Oslava Dne církevního školství </li>
+    <li>Mše svaté v&nbsp;kostele sv. Voršily</li>
+    <li>Pravidelná divadelní představení v MŠ, návštěva divadel</li>
+    <li>Posezení s&nbsp;rodiči v&nbsp;adventní době a u  příležitosti svátku maminek</li>
+    <li>Duchovní obnovy pro rodiče v&nbsp;adventní a postní  době</li>
+    <li>Vánoční trhy společné se ZŠ sv. Voršily</li>
+    <li>Masopust</li>
+    <li>Polodenní a celodenní výlety (ZOO, Botanická zahrada,  Ekocentrum - Sv. Jan pod Skalou)</li>
+    <li>Tematické vycházky za poznáním Prahy a přírody</li>
+  </ul>
+<br />
+  <p><em>Dílčí  projekty </em>
+
+<strong>Otevřená odpoledne pro rodiče dětí</strong>
+<p>Otevřená odpoledne jsou setkání blízkých příbuzných dětí navštěvujících naší MŠ.Aktivita probíhá v prostorách mateřské školy. Odpolední program je vyplněn zajímavými technikami, které většinou kopírují obsah ŠVP. Činnosti jsou připravovány tak, aby si z nabídky mohly vybrat všechny věkové kategorie dětí a mohly tvořit. Setkání umožňuje rodičům aktivně prožívat s dětmi program, na kterém se mohou dle vlastního uvážení podílet. Jednotlivá setkání probíhají 1x měsíčně.</p>
+
+    <strong>Plaván</strong>í (pro děti z 2. třídy)<br>
+    Plavání v&nbsp;bazénu ZŠ sv. Voršily – zábavnou formou  zajišťují učitelky s seznámení s&nbsp;vodou a především se snaží odstranit  strach z vody. Děti si osvojují základní techniku plavání. Velká část dětí se  naučí plavat.</p>
+  <p><strong>Keramika</strong> (pro děti z 2. třídy)<br>
+    Keramiku vede kvalifikovaná učitelka v&nbsp;ZUŠ – Veselá  škola. Děti se projektu účastní střídavě ve dvou skupinách 1x týdně. To  umožňuje  individuální přístup ke každému  dítěti. Seznamují se s&nbsp;vlastnostmi keramické hlíny, učí se jí zpracovávat  a tvarovat. Výrobky jsou vystavovány ve škole.</p>
+ 
+  <p><em>Doplňkový program</em>
+  
+
+
+
+
+    <strong>Taneční kroužek</strong> (od 4 let věku)<br>
+   Taneční kroužek  povede p.uč.  Adéla Hájková /ZUŠ/
+<br>
+  Děti budou procvičovat rytmus, zpěv a tanec
+<br>
+Výuka bude probíhat od čtvrtka 4.10. od 15.00 hod.
+<br><br>
+
+   
+   </p>
+  <p><strong>&nbsp;<br><br><br></strong></p>
+</li>
+</ul>
+    		</div>	
+    		<!-- END AKTIVITY -->	
+    	
+    		<!-- VZDELAVACI PROGRAM -->
+    		<div class="left_content" id="vprogram" style="display:none">
+    			<h2>Vzdělávací program</h2>
+    		<p> Pracujeme podle školního vzdělávacího programu "Pojď dál, vítej u nás". Tento program je zaměřen na citlivé formování osobnosti dítěte v 
+    		křesťanském duchu a na estetickou tvořivost. Individuální péče je věnována dětem s OŠD.</p>
+<p> 
+ŠVP je zpracován do 10 integrovaných bloků , které jsou  rozpracovány v třídních vzdělávacích programech do témat. Jejich časovou délku určuje zájem,
+ potřeby dětí a aktuální dění v mateřské škole. Jsou dostatečně široká, aby poskytovala dostatek podnětů k činnostem.
+</p>
+
+Cílem je:
+<br >
+
+<ul class="list">
+<li> Podporovat rozvoj osobnosti dětí vzhledem k jejich možnostem, zájmům a individuálním potřebám</li> 
+
+<li> Osvojit si návyky a dovednosti potřebné k zvládání běžných i problémových situací v životě</li> 
+
+<li>   Rozvíjet komunikaci a upevňovat prosociální chování a cítění ke svému okolí a životnímu prostředí.</li> 
+
+<li>  Seznámit děti se základy náboženské výchovy a křesťanských tradic.</li> 
+
+</ul>
+
+<p> 
+. Naše činnosti jsou obohaceny o slavení církevních svátků. To nám umožňuje vést děti vhodným způsobem ke křesťanským hodnotám a tradicím. Klademe důraz na citovou a mravní výchovu, která prolíná všemi činnostmi. V naší MŠ neznáme ve vzájemné komunikaci dětí vulgární vyjadřování ani agresivitu. Katecheze je prováděna smyslově-symbolickou metodou Franze Ketta. Tato metoda je založena na osobním prožitku dítěte s daným tématem a je v ní využito přírodních materiálů a barevných šátků. Děti se v ní mohou vyjádřit (tancem, zpěvem, ...) nebo mají naopak příležitost ke ztišení a zklidnění. 
+</p>
+
+
+<p class="Px40">Školní vzdělávací program  - POJĎ DÁL, VÍTEJ U NÁS – Broučci </p>
+<table border="0" cellspacing="0" cellpadding="0" class="Table1 tabulka_program"><colgroup><col width="219"/><col width="350"/><col width="430"/></colgroup><tr class="Table11"><td style="text-align:left;width:5.001cm; " class="Table1_A1"><p class="Px5">Integrovaný blok</p></td><td style="text-align:left;width:8.001cm; " class="Table1_A1"><p class="Px5">témata</p></td><td style="text-align:left;width:9.841cm; " class="Table1_C1"><p class="Px5">Katecheze </p></td></tr><tr class="Table12"><td rowspan="3" style="text-align:left;width:5.001cm; " class="Table1_A2"><p class="Px6">Pojď dál, vítej ve školce</p></td><td style="text-align:left;width:8.001cm; " class="Table1_B2"><p class="Px8">Vítej u nás </p></td><td style="text-align:left;width:9.841cm; " class="Table1_C2"><p class="Px4"> </p></td></tr><tr class="Table12"><td style="text-align:left;width:8.001cm; " class="Table1_B2"><p class="Px8">Čas kamarádství </p></td><td style="text-align:left;width:9.841cm; " class="Table1_C2"><p class="Px9">Pojď dál, začínáme, Tolik věcí je kolem nás</p></td></tr><tr class="Table12"><td style="text-align:left;width:8.001cm; " class="Table1_B2"><p class="Px8">Kde bydlím já, kde bydlíš ty?</p></td><td style="text-align:left;width:9.841cm; " class="Table1_C2"><p class="Px9">O malém chlapci, který hledal kamaráda </p></td></tr><tr class="Table12"><td rowspan="2" style="text-align:left;width:5.001cm; " class="Table1_A5"><p class="Px11">V úrodné zemi </p></td><td style="text-align:left;width:8.001cm; " class="Table1_A1"><p class="Px13"><span class="T1">Jak chutná podzim</span> (úroda) </p></td><td style="text-align:left;width:9.841cm; " class="Table1_C1"><p class="Px10">Hurá, už je podzim/ Sklízíme úrodu /Co spadne do země to vyroste</p></td></tr><tr class="Table12"><td style="text-align:left;width:8.001cm; " class="Table1_A1"><p class="Px13">V lese (příroda, zvířata, plody) </p></td><td style="text-align:left;width:9.841cm; " class="Table1_C1"><p class="Px9">Stromy jsou jako my lidé/ Podzimní stromy jsou tak krásné!</p></td></tr><tr class="Table12"><td style="text-align:left;width:5.001cm; " class="Table1_A7"><p class="Px14">Zahřeji tě, když ti bude zima</p></td><td style="text-align:left;width:8.001cm; " class="Table1_B2"><p class="Px16">Počasí si s námi hraje (oblečení, zdraví,  smysly)  </p></td><td style="text-align:left;width:9.841cm; " class="Table1_C2"><p class="Px9">Zahřeji tě, když ti bude zima / Ahoj starý strome</p></td></tr><tr class="Table12"><td style="text-align:left;width:5.001cm; " class="Table1_A7"><p class="Px15"> </p></td><td style="text-align:left;width:8.001cm; " class="Table1_B2"><p class="Px17"> </p></td><td style="text-align:left;width:9.841cm; " class="Table1_C2"><p class="Px9">O sv. Martinovi, Světlo sviť</p></td></tr><tr class="Table12"><td style="text-align:left;width:5.001cm; " class="Table1_A7"><p class="Px18">Oslavíme advent</p></td><td style="text-align:left;width:8.001cm; " class="Table1_B2"><p class="Px19">Mikuláš klepe na okno</p></td><td style="text-align:left;width:9.841cm; " class="Table1_C2"><p class="Px9">Mikuláš ten dobré srdce má, Zelený věneček...</p></td></tr><tr class="Table12"><td style="text-align:left;width:5.001cm; " class="Table1_A7"><p class="Px20"> </p></td><td style="text-align:left;width:8.001cm; " class="Table1_B2"><p class="Px19">Za Betlémskou hvězdou</p></td><td style="text-align:left;width:9.841cm; " class="Table1_C2"><p class="Px9">Ovečko,  jak se budeš jmenovat/ Hvězda svítí nad Betlémem </p></td></tr><tr class="Table12"><td rowspan="2" style="text-align:left;width:5.001cm; " class="Table1_A4"><p class="Px21">Ve spící zemi </p></td><td style="text-align:left;width:8.001cm; " class="Table1_B2"><p class="Px23">Nosím královskou korunu</p></td><td style="text-align:left;width:9.841cm; " class="Table1_C2"><p class="Px24"><span class="T2"> </span><span class="T3">Nosím královskou koruny</span></p></td></tr><tr class="Table12"><td style="text-align:left;width:8.001cm; " class="Table1_B2"><p class="Px3">Když sněhová vločka tančí</p></td><td style="text-align:left;width:9.841cm; " class="Table1_C2"><p class="Px9">Sněží, sněží, mráz kolem běží / Sněhulák /Šťastná roztančená vločka</p></td></tr><tr class="Table12"><td style="text-align:left;width:5.001cm; " class="Table1_A4"><p class="Px25">V  zemi pohádek </p></td><td style="text-align:left;width:8.001cm; " class="Table1_B2"><p class="Px9"><span class="T4">Pojďme za pohádkou</span><span class="T5"> </span></p></td><td style="text-align:left;width:9.841cm; " class="Table1_C2"><p class="Px9">Stopy ve sněhu/ Ptáčci v zimě </p></td></tr><tr class="Table12"><td rowspan="2" style="text-align:left;width:5.001cm; " class="Table1_A4"><p class="Px26">Na modré planetě </p></td><td style="text-align:left;width:8.001cm; " class="Table1_B2"><p class="Px24"><span class="T7"> </span><span class="T9">Voda, voděnka</span><span class="T11"> </span></p></td><td style="text-align:left;width:9.841cm; " class="Table1_C2"><p class="Px9">Hřej sluníčko, hřej / Všechno raší, jaro je tady </p></td></tr><tr class="Table12"><td style="text-align:left;width:8.001cm; " class="Table1_B2"><p class="Px28">Jaro v trávě (květiny, broučci)</p></td><td style="text-align:left;width:9.841cm; " class="Table1_C2"><p class="Px9">Potřebuji hnízdečko/ Povídání o kosíkovi...</p></td></tr><tr class="Table12"><td style="text-align:left;width:5.001cm; " class="Table1_A7"><p class="Px29">Na rozkvetlé zemi</p></td><td style="text-align:left;width:8.001cm; " class="Table1_B2"><p class="Px31">Velikonoce, svátky nového života</p></td><td style="text-align:left;width:9.841cm; " class="Table1_C2"><p class="Px9">Kříž, vypravuje o životě </p></td></tr><tr class="Table12"><td rowspan="2" style="text-align:left;width:5.001cm; " class="Table1_A4"><p class="Px30"> </p></td><td style="text-align:left;width:8.001cm; " class="Table1_B2"><p class="Px31">Malí zahradníci</p></td><td style="text-align:left;width:9.841cm; " class="Table1_C2"><p class="Px9">Velikonoce, svátky nového života/ Květinka rozkvete, dobře je na světě</p></td></tr><tr class="Table12"><td style="text-align:left;width:8.001cm; " class="Table1_B2"><p class="Px31">Jarní dvoreček</p></td><td style="text-align:left;width:9.841cm; " class="Table1_C2"><p class="Px9">Dej pozor, aby jsi mi neublížil</p></td></tr><tr class="Table12"><td rowspan="2" style="text-align:left;width:5.001cm; " class="Table1_A4"><p class="Px32">Ve světě plném  barev</p></td><td style="text-align:left;width:8.001cm; " class="Table1_B2"><p class="Px34">Moje maminka bude mít svátek </p></td><td style="text-align:left;width:9.841cm; " class="Table1_C2"><p class="Px9">Děkujeme za rodiče</p></td></tr><tr class="Table12"><td style="text-align:left;width:8.001cm; " class="Table1_B2"><p class="Px34">Duha, duhová ( motýl, paleta barev)</p></td><td style="text-align:left;width:9.841cm; " class="Table1_C2"><p class="Px35">Copak se vylíhne z vajíčka/Leť beruško zlatá </p></td></tr><tr class="Table12"><td rowspan="2" style="text-align:left;width:5.001cm; " class="Table1_A21"><p class="Px36">Provedem tě po zemi </p></td><td style="text-align:left;width:8.001cm; " class="Table1_B2"><p class="Px38">Když rozkvete louka</p></td><td style="text-align:left;width:9.841cm; " class="Table1_C2"><p class="Px35">Nenápadná krása/ Na naší louce všechno kvete </p></td></tr><tr class="Table11"><td style="text-align:left;width:8.001cm; " class="Table1_B22"><p class="Px38">Cestujeme po zemi / Těšíme se na prázdniny </p></td><td style="text-align:left;width:9.841cm; " class="Table1_C22"><p class="Px35">Mám kořeny, a přesto mohu létat</p></td></tr></table>
+<p class="Px2"/><p class="Px2">Školní vzdělávací program  - POJĎ DÁL, VÍTEJ U NÁS – Hvězdičky  </p><table border="0" cellspacing="0" cellpadding="0" class="Table2 tabulka_program"><colgroup><col width="219"/><col width="350"/><col width="430"/></colgroup><tr class="Table21"><td style="text-align:left;width:5.001cm; " class="Table2_A1"><p class="Px5">Integrovaný blok</p></td><td style="text-align:left;width:8.001cm; " class="Table2_A1"><p class="Px5">témata</p></td><td style="text-align:left;width:9.841cm; " class="Table2_C1"><p class="Px5">Katecheze </p></td></tr><tr class="Table22"><td rowspan="3" style="text-align:left;width:5.001cm; " class="Table2_A2"><p class="Px6">Pojď dál, vítej ve školce</p></td><td style="text-align:left;width:8.001cm; " class="Table2_B2"><p class="Px8">Vítej u nás </p></td><td style="text-align:left;width:9.841cm; " class="Table2_C2"><p class="Px4"> </p></td></tr><tr class="Table22"><td style="text-align:left;width:8.001cm; " class="Table2_B2"><p class="Px8">Čas kamarádství </p></td><td style="text-align:left;width:9.841cm; " class="Table2_C2"><p class="Px4"> </p></td></tr><tr class="Table22"><td style="text-align:left;width:8.001cm; " class="Table2_B2"><p class="Px8">Kde bydlím já, kde bydlíš ty?</p></td><td style="text-align:left;width:9.841cm; " class="Table2_C2"><p class="Px9">O malém, chlapci, který hledal kamaráda</p></td></tr><tr class="Table22"><td rowspan="2" style="text-align:left;width:5.001cm; " class="Table2_A5"><p class="Px11">V úrodné zemi </p></td><td style="text-align:left;width:8.001cm; " class="Table2_A1"><p class="Px13"><span class="T1">Jak chutná podzim</span> (úroda) </p></td><td style="text-align:left;width:9.841cm; " class="Table2_C1"><p class="Px9"><span class="T1">Bůh stvořil svět s určitým záměrem/</span> Bůh stvořil člověka s láskou</p></td></tr><tr class="Table22"><td style="text-align:left;width:8.001cm; " class="Table2_A1"><p class="Px13">V lese (příroda, zvířata, plody) </p></td><td style="text-align:left;width:9.841cm; " class="Table2_C1"><p class="Px9">Modlitba – Bůh na telefonu</p></td></tr><tr class="Table22"><td style="text-align:left;width:5.001cm; " class="Table2_A7"><p class="Px14">Zahřeji tě, když ti bude zima</p></td><td style="text-align:left;width:8.001cm; " class="Table2_B2"><p class="Px16">Počasí si s námi hraje (oblečení, zdraví,  smysly)  </p></td><td style="text-align:left;width:9.841cm; " class="Table2_C2"><p class="Px9">Co mohu vidět/ Co mohu slyšet/ Sv. Martin/ Zahřeji tě, když ti bude zima</p></td></tr><tr class="Table22"><td style="text-align:left;width:5.001cm; " class="Table2_A7"><p class="Px18">Oslavíme advent</p></td><td style="text-align:left;width:8.001cm; " class="Table2_B2"><p class="Px19">Mikuláš klepe na okno</p></td><td style="text-align:left;width:9.841cm; " class="Table2_C2"><p class="Px9">Mikuláš pomáhá, co může rozdává </p></td></tr><tr class="Table22"><td style="text-align:left;width:5.001cm; " class="Table2_A7"><p class="Px20"> </p></td><td style="text-align:left;width:8.001cm; " class="Table2_B2"><p class="Px19">Za Betlémskou hvězdou</p></td><td style="text-align:left;width:9.841cm; " class="Table2_C2"><p class="Px9">Putujeme do Betléma/ Bůh chce tebe – příběh o ovečce </p></td></tr><tr class="Table22"><td rowspan="2" style="text-align:left;width:5.001cm; " class="Table2_A4"><p class="Px21">Ve spící zemi </p></td><td style="text-align:left;width:8.001cm; " class="Table2_B2"><p class="Px23">Nosím královskou korunu</p></td><td style="text-align:left;width:9.841cm; " class="Table2_C2"><p class="Px9">Tři králové se přišli poklonit Ježíši </p></td></tr><tr class="Table22"><td style="text-align:left;width:8.001cm; " class="Table2_B2"><p class="Px9"><span class="T12">Když sněhová vločka tančí, </span><span class="T6">(Život mezi eskymáky, ptáčci v zimě)</span></p></td><td style="text-align:left;width:9.841cm; " class="Table2_C2"><p class="Px9">Stopy ve sněhu/ Šťastná roztančená sněhová vločka </p></td></tr><tr class="Table22"><td style="text-align:left;width:5.001cm; " class="Table2_A4"><p class="Px25">V  zemi pohádek </p></td><td style="text-align:left;width:8.001cm; " class="Table2_B2"><p class="Px9"><span class="T4">Pojďme za pohádkou</span><span class="T5"> </span><span class="T6">(pohádková kniha)</span></p></td><td style="text-align:left;width:9.841cm; " class="Table2_C2"><p class="Px9">Noemova Archa / Abraham / Mojžíš – Bůh odpovídá na modlitby </p></td></tr><tr class="Table22"><td rowspan="3" style="text-align:left;width:5.001cm; " class="Table2_A4"><p class="Px26">Na modré planetě </p></td><td style="text-align:left;width:8.001cm; " class="Table2_B2"><p class="Px39">(Vesmír) </p></td><td style="text-align:left;width:9.841cm; " class="Table2_C2"><p class="Px9">Bůh stvořil Vesmír </p></td></tr><tr class="Table22"><td style="text-align:left;width:8.001cm; " class="Table2_B2"><p class="Px9"><span class="T8">Voda, voděnka</span><span class="T10"> </span><span class="T6">(poznáváme  jednotlivé kontinenty)</span></p></td><td style="text-align:left;width:9.841cm; " class="Table2_C2"><p class="Px9">Ježíš uzdravuje nemocné/ Bouře na moři – s Ježíšem se nemusím bát </p></td></tr><tr class="Table22"><td style="text-align:left;width:8.001cm; " class="Table2_B2"><p class="Px28">Jaro v trávě (květiny, broučci)</p></td><td style="text-align:left;width:9.841cm; " class="Table2_C2"><p class="Px9">Ježíš nám odpouští hříchy – povídání o srdíčku</p></td></tr><tr class="Table22"><td style="text-align:left;width:5.001cm; " class="Table2_A7"><p class="Px29">Na rozkvetlé zemi</p></td><td style="text-align:left;width:8.001cm; " class="Table2_B2"><p class="Px31">Velikonoce, svátky nového života</p></td><td style="text-align:left;width:9.841cm; " class="Table2_C2"><p class="Px9">Ježíš tě volá jménem – setkání s Maří Magdalenou</p></td></tr><tr class="Table22"><td rowspan="2" style="text-align:left;width:5.001cm; " class="Table2_A4"><p class="Px30"> </p></td><td style="text-align:left;width:8.001cm; " class="Table2_B2"><p class="Px31">Malí zahradníci</p></td><td style="text-align:left;width:9.841cm; " class="Table2_C2"><p class="Px9">V malém  semínku je ukrytý život </p></td></tr><tr class="Table22"><td style="text-align:left;width:8.001cm; " class="Table2_B2"><p class="Px31">Jarní dvoreček</p></td><td style="text-align:left;width:9.841cm; " class="Table2_C2"><p class="Px9">O Božím  království</p></td></tr><tr class="Table22"><td rowspan="2" style="text-align:left;width:5.001cm; " class="Table2_A4"><p class="Px32">Ve světě plném  barev</p></td><td style="text-align:left;width:8.001cm; " class="Table2_B2"><p class="Px34">Moje maminka bude mít svátek </p></td><td style="text-align:left;width:9.841cm; " class="Table2_C2"><p class="Px9">Děkujeme za rodiče </p></td></tr><tr class="Table22"><td style="text-align:left;width:8.001cm; " class="Table2_B2"><p class="Px34">Duha, duhová ( motýl, paleta barev)</p></td><td style="text-align:left;width:9.841cm; " class="Table2_C2"><p class="Px35">Duha symbol smlouvy mezi člověkem a Bohem/ Copak se vylíhne z vajíčka </p></td></tr><tr class="Table22"><td rowspan="2" style="text-align:left;width:5.001cm; " class="Table2_A21"><p class="Px36">Provedem tě po zemi </p></td><td style="text-align:left;width:8.001cm; " class="Table2_B2"><p class="Px38">Když rozkvete louka</p></td><td style="text-align:left;width:9.841cm; " class="Table2_C2"><p class="Px35">O berušce Barušce/ Na naší louce všechno kvete</p></td></tr><tr class="Table21"><td style="text-align:left;width:8.001cm; " class="Table2_B22"><p class="Px38">Cestujeme po zemi / Těšíme se na prázdniny </p></td><td style="text-align:left;width:9.841cm; " class="Table2_C22"><p class="Px35">Bůh nás vede po svých cestách/ O kamenné palmě </p></td></tr></table>
+	
+
+
+    		</div>	
+    		<!-- END VZDELAVACI PROGRAM -->		
+    			
+    	    <!-- SKOLKA -->
+    		<div class="left_content" id="skolka" style="display:none">
+    			<h2>Školka</h2>
+    			<ul>
+
+<li><strong>MŠ byla založena v roce 1979 v areálu bývalého voršilského kláštera.</strong></li>	
+
+<li>Školní rok 1991 byl velkým mezníkem v historii MŠ. Vlastníkem se stal řád sv. Voršily a do názvu je včleněno slovo církevní, čímž došlo k výrazné změně v náplni práce a ducha školy.V novodobé historii prožíváme letošní rok jako šestnáctý. V lonském roce škola změnila své jméno na MŠ sv. Voršily v Praze, stala se školskou právnickou osobou a byla ustanovena Rada ŠPO.</li>	
+
+<li>Jsme dvoutřídní MŠ rodinného typu, otevřená věřícím rodinám, ale i rodinám bez vyznání. V 1. třídě „Broučků„ jsou zařazeny děti od 3 do 5 let, ve 2. třídě „Hvězdiček„ jsou zařazeny děti od 5 do 7 let věku. O pestrý a bohatý program v MŠ se stará 6 kvalifikovaných učitelek, o čisté prostředí a domácí stravu 3 provozní zaměstnanci.</li>	
+
+<li>Rodiče mají možnost zúčastnit se programu školy i mimořádných akcí. Umožňujeme přístup do tříd, společný pobyt na zahradě, zvláště u nově přijatých dětí. Snažíme se o nenásilnou a úspěšnou adaptaci dětí.K pobytu dětí 1. tř. využíváme travnatou a příjemnou zahradu v areálu kláštera. Předškolní děti mohou využít zahradu s vybavením ve vnitrobloku V Jirchářích, kterou máme v užívání od MČ Prahy 1, nebo realizují tématické vycházky do okolí. / Dětský ostrov, Petřín, Střelecký ostrov /</li>	
+
+<li><strong>Vybavení dítěte do MŠ:</strong> </li>
+
+<li>Ideální je oblečení vzdušné a pohodlné bez pásků a kšand, které si děti mohou samy obléknout a svléknout.</li>
+
+<li><strong>Doporučujeme:</strong></li>
+<li>volné kalhoty, eventuelně sukničky v pase na gumu ( s kapsičkou na kapesník )</li> 
+<li>starší a pohodlné oblečení na pobyt venku </li>
+<li>pyžamo nebo noční košilku </li>
+<li>bačkůrky s pevnou patou, ne zavazovací</li> 
+<li>2x ročně balík papírových kapesníků</li>
+<li>1x ročně balík toaletního papíru</li>
+
+
+<li><strong>Upozornění rodičům:</strong></li>
+<li>Při nástupu do mateřské školy pravidelně sledujte aktuální informace na nástěnce, která je umístněnna na schodišti.</li>
+
+
+<li><strong>Před nástupem do MŠ by měly děti umět samostatně:</strong> </li>
+<li>obléknout a svléknout si jednoduché části oděvu</li> 
+<li>uklidit si po sobě hračky </li>
+<li>dodržovat základní hygienické a pracovní návyky</li> 
+<li>umět používat kapesník </li>
+
+
+<li><strong>Do školy nepatří:</strong></li>
+<li>ostré předměty, žvýkačky, šperky, mobilní telefony, drahé hračky, peníze, tvrdé bombóny</li>
+
+
+
+<li><strong>Kolektiv mateřské školy udělá vše pro spokojený pobyt Vašich dětí.</strong></li>
+
+</ul>
+    		</div>	
+    		<!-- END SKOLKA -->	
+    		
+    		<!-- JIDELNA -->
+    		<div class="left_content" id="jidelna" style="display:none">
+    			<h2>Jídelna</h2>
+
+
+    	<p class="emph" style="font-size:14px">   </p>
+    	
+    	<!-- VANDI JIDELNA TABULKA -->
+
+
+  
+ 
+  
+      	
+    	
+    		<!-- VANDI JIDELNATABULKA -->
+<p>
+  Změna jídelníčku dle zásobovací situace vyhrazena !!!<br>
+    
+    Jídla připravila: paní <strong>Marcela Podaná</strong>
+
+<pre>
+<strong> 
+Informace o placení stravného  bezhotovostně ve školním roce 2012/2013
+</strong>
+
+a) trvalým příkazem
+
+číslo účtu             : 35-1932459369/0800
+variabilní symbol      : datum narození dítěte
+zpráva pro příjemce    : jméno dítěte
+termín                 : 5.dne v měsíci (bez července a srpna)
+částka                 : polodenní docházka …  520,-Kč
+                         celodenní docházka …  600,-Kč
+Stravné bude vyúčtováno vždy 1x za školní rok-přeplatek bude vrácen na Váš účet
+
+b) jednorázovým příkazem               
+
+číslo účtu             : 35-1932459369/0800
+variabilní symbol      : datum narození dítěte
+zpráva pro příjemce    : jméno dítěte
+termín                 : do 5.dne v měsíci
+částka                 : bude vyvěšena na nástěnce  
+
+-stravné bude vyúčtováno každý měsíc stejně jako při platbě v hotovosti
+  </pre>  
+   
+    
+    
+    <br>
+    <strong>Řád školní jídelny</strong>
+    <br>
+    1.	Řád školní jídelny je součástí Provozního řádu MŠ sv. Voršily v Praze.<br>
+    2.	Školní jídelna je v provozu v pracovní dny od 6,30 do 15 hodin.<br>
+    3.	Děti jsou do školní jídelny přihlášeny zároveň s přihlášením do MŠ na základě vyplnění tiskopisu Přihláška ke stravování.<br>
+    4.	Stravné je placeno :<br> a) v hotovosti v  hospodářce ŠJ.V každém měsíci je stanoven jeden termín výběru stravného (většinou 2. úterý v měsíci v době od 12,30 do 17,00 hodin).Termín je včas vyvěšen na nástěnce v mezipatře.<br>
+    b)bezhotovostně na účet školní jídelny(viz Informace)<br>
+    
+    Částku za stravné činí násobek pracovních dnů v daném měsíci a stravného.Tato částka je snížena o přeplatek nebo zvýšena o nedoplatek  z minulého měsíce.<br>
+    <strong>Děti,které jsou do MŠ přihlášeny  k&nbsp;celodennímu pobytu platí 38,- Kč</strong><br>
+    <strong>Děti,které jsou do MŠ přihlášeny  k&nbsp;polodennímu pobytu platí 31,- Kč</strong><br>
+    Částka je  rozdělena takto :<br>
+    přesnídávka ……………………      7,-Kč<br>
+    oběd        …………………………… 21,-Kč<br>
+    svačina    …………………………    7,-  Kč<br>
+    pitný režim ……………………     3,-Kč</p>
+<p><br>
+    5.Děti,které jsou do MŠ přihlášeny  k&nbsp;celodennímu pobytu platí  35,- Kč<br>
+Děti,které jsou do MŠ přihlášeny  k&nbsp;polodennímu pobytu platí  28,- Kč<br>
+Částka je rozdělena takto :  <br>
+přesnídávka ……………………….    7,- Kč                                                                   <br>
+oběd          ………………………...   19,- Kč<br>
+svačina     …………………………     7,- Kč<br>
+pitný  režim ………………………       2,- Kč</p>
+<p><br>
+  
+  
+  Jestliže nebude stravné uhrazeno déle než jeden měsíc,přestože bude dítě       
+  v MŠ přítomno,nebude mu strava vydána !!!<br>
+  <br>
+  6.	Rodiče mohou děti ze stravování odhlásit společně s odhlášením pobytu v MŠ
+  předešlý den nebo daný den nejpozději do 8,00 hodin.
+  Včas neodhlášenému dítěti je stravné za daný den počítáno v plné výši. <br>
+  
+  7.   Jídelní lístek sestavuje hospodářka ŠJ společně s kuchařkou na období jednoho 
+  týdne předem a je vyvěšen na nástěnce v mezipatře budovy MŠ.Změny v jídelním
+  lístku jsou možné při technických,provozních nebo zásobovacích problémech.
+  Jsou oznámeny změnou stávajícího jídelního lístku rodičům.<br>
+  
+  8.	Připomínky ke stravování řeší rodiče s hospodářkou MŠ paní Janou Krausovou.<br><br>
+  
+  <strong>V Praze dne 1.září  2012<br>
+    Anna Luňáčková, ředitelka <br>
+    MŠ sv. Voršily v Praze<br>
+  </strong></p>
+    		</div>	
+    		<!-- END JIDELNA -->	
+  
+      		<!-- FOTO -->
+    		<div class="left_content" id="foto" style="display:none">
+    			<h2>Fotogalerie</h2>
+    			
+    			<a href="./masopust.zip">Masopust</a>
+    			<br />
+    			<a href="foto1.pdf">Fotky ze naší školky v PDF</a>
+    			<br />
+    			<iframe width="670" height="400" name="fotogalerie" frameborder="0" id="foto" src="http://www.soukupova-marketa.cz/galerie_mssvvorsily.cz/galerie.php" scrolling="no"></iframe>
+
+    		</div>	
+    		<!-- END FOTO -->
+
+  		<!-- DOKUMENTY-->
+    		<div class="left_content" id="dokumenty" style="display:none">
+    			<h2>Dokumenty</h2>
+ <a href="./evidencni_list.doc">Evidenční list</a><br />
+  <a href="./Skolni_rad_2013.doc">Školní řád 2013</a><br />
+<a href="./Prihlaska ke stravovani.doc">Přihláška ke stravování MŠ sv. Voršily</a><br />
+<a href="./Zadost k zapisu ditete do MS.doc">Žádost k zápisu dítěte do MŠ</a><br />
+
+ <br /><br />
+Doporučující materiál z MŠMT Desatero pro rodiče dětí předškolního věku
+je určen rodičům dětí, kteří se zajímají o vzdělávání dítěte a  o základních dovednostech, které si má dítě  před vstupem do základní školy osvojit. 
+<br /><br />
+
+  <a href="http://www.msmt.cz/vzdelavani/desatero-pro-rodice-deti-predskolniho-veku">http://www.msmt.cz/vzdelavani/desatero-pro-rodice-deti-predskolniho-veku</a>
+ 
+    		</div>	
+    		<!-- END DOKUMENTY-->
+    		<!-- ZAPIS-->
+    		<div class="left_content" id="zapis" style="display:none">
+    			<h2>Zápis dětí</h2>
+    			
+ <a href="./kriteria.doc">Kriteria k zápisu dítěte do MŠ</a><br />
+ <a href="./zadost.doc">Žádost k zápisu dítěte do MŠ</a><br />
+ <a href="./evidencni_list.doc">Evidenční list</a><br />
+<h2>Zápis dětí na školní rok 2013/2014 proběhne ve středu 10. dubna 2013 od 15,00 – 18,00 hod.</h2>
+ <p>
+ K zápisu přijďte se svým dítětem.
+ 
+Přineste s sebou vyplněnou:<br />
+1)  Žádost k zápisu<br />
+2)  Evidenční list dítěte, kde je    potřeba vyjádření  od pediatra<br />
+3) Rodný list dítěte<br />
+4) Občanský průkaz zákonného   zástupce   <br />           
+ </p>
+<strong>V současné době je kapacita MŠ naplněna.</strong>
+ <br /><br />
+ 
+ 
+
+    		</div>	
+    		<!-- END ZAPIS -->	
+    		
+    		<!-- KONTAKT-->
+    		<div class="left_content" id="kontakt" style="display:none">
+    			<h2>Kontakt</h2>
+    			<table style="width:100%">
+    				<tr>
+    					<td colspan="2" class="tabText"> 						
+    						v centru Prahy, nedaleko stanice tramvaje Národní divadlo. <br />
+							Spojení tramvaj číslo: 6, 9, 17, 18, 21, 22, 23 
+    					</td>
+    					
+    				</tr>
+    				
+    				<tr>
+    					<td style="width:400px"><div id="map_canvas" style="width:auto; height:340px"></div></td>
+    					<td colspan="" class="tabText" valign="top"> 						
+    						Ostrovní 11, 110 00 Praha 1 <br />
+							Telefon: +420 224 930 861<br />
+							Mobil: +420 775 338 743<br />
+							Mail: <a href="mailto:cmsostrovni@tiscali.cz">cmsostrovni@tiscali.cz</a>
+    					</td>
+    					
+    				</tr>
+    				<tr>
+    					
+    					<td colspan="2"> 						
+    						<img src="images/getintouch.jpg" alt="" title="" border="0" class="right_banner" />
+    					</td>
+    					
+    				</tr>
+    			</table>
+    			
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?sensor=true">
+    </script>
+		    <script type="text/javascript">
+				  function initialize() {
+				    var latlng = new google.maps.LatLng(50.080499, 14.415864);
+				    var myOptions = {
+				      zoom: 15,
+				      center: latlng,
+				      mapTypeId: google.maps.MapTypeId.ROADMAP
+				    };
+				    var map = new google.maps.Map(document.getElementById("map_canvas"),
+				        myOptions);
+				
+				 var image = new google.maps.MarkerImage('images/marker.png',
+       			 new google.maps.Size(65, 124),
+      			  new google.maps.Point(0,0),
+       			 new google.maps.Point(56, 122)
+    			);
+				    var marker = new google.maps.Marker({
+				        position: latlng, 
+				        map: map, 
+				        title:"Školka",
+				        icon:image
+				    });   
+				    		    
+				var contentString =
+				
+				    '<div style="color:black">'+
+				    'Ostrovní 11, 110 00 Praha 1 <br />' + 
+										'	Telefon: +420 224 930 861<br />' + 
+										'	Mobil: +420 775 338 743<br />' + 
+										'	Mail: <a href="mailto:cmsostrovni@tiscali.cz">cmsostrovni@tiscali.cz</a>' + 
+				    '</div>';
+
+					var infowindow = new google.maps.InfoWindow({
+					    content: contentString
+					});
+					
+					
+									    google.maps.event.addListener(marker, 'click', function() {
+					  infowindow.open(map,marker);
+					});
+
+				  }
+				  
+				</script>
+    		</div>	
+    		<!-- END KONTAKT -->	
+    		
+    		<!-- ODKAZY-->
+    		<div class="left_content" id="odkazy" style="display:none">
+    			<h2>Odkazy</h2>
+    			<ul>
+<li><strong>Zřizovatel:</strong></li>
+<li>Českomoravská provincie Římské unie řádu sv. Voršily</li>
+<li>Ostrovní 11, 11000 Praha 1 - Nové Město</li>
+<li><a href="http://www.ursulines-ur.org/" target="_blank">Ursulines of the Roman Union</a><br><br><br></li>
+<li><strong>Voršilské školy v ČR:</strong></li>
+<li><a href="http://www.zcsol.cz/" target="_parent">Základní škola sv. Voršily v Olomouci</a></li>
+
+
+<li><a href="http://www.cgym-kh.cz/" target="_parent">Církevní gymnázium sv. Voršily Kutná Hora</a></li>
+<li><a href="http://www.soukupova-marketa.cz/zs_sv_vorsily/1b_home.html" target="_parent">Stránky třídy 1.B. Základní školy sv. Voršily</a></li>
+
+<li><a href="http://www.volny.cz/zcs.ostrovni/" target="_parent">Základní škola sv. Voršily v Praze</a><br><br><br></li>
+<li><strong>Další odkazy:</strong></li>
+<li><a href="http://vorsilky.ic.cz/" target="_parent" class="style2">Sestry Voršilky Římské unie řádu<br>svaté Voršily v České republice</a></li>
+<li><a href="http://www.proglas.cz/kafemlynek" target="_parent">Kafemlýnek - Radio Proglas</a></li>
+<li><a href="http://www.tvnoe.cz" target="_parent">Tv Noe - televize dobrých zpráv</a></li>
+<li><a href="http://www.sklenenykostel.net/j15/" target="_parent">Skleněný kostel</a></li>
+<li><a href="http://www.apha.cz/" target="_parent">Arcibiskupství pražské</a></li>
+<li><a href="http://www.zus-upujcovny.cz">Základní umělecká škla U půjčovny</a> výuka probíhá v Josefské 4 na Malé straně.</li>
+</ul>
+    		</div>	
+    		<!-- END ODKAZY -->	
+    		
+    		<!-- XX -->
+    		<div class="left_content" id="xxx" style="display:none">
+    			
+    		</div>	
+    		<!-- END XX -->		
+    				
+            <div class="right_content">
+            	<!-- <h1>Aktuality</h1>-->	
+                
+                <a href="#"><img src="images/request_sample.jpg" alt="" title="" border="0" class="right_banner" /></a>
+                
+                <div class="services_list">
+                  
+ 
+                                   
+                   <div class="news">
+                  
+                  	<p>
+                  										
+                  	</p>
+                  </div> 
+                <!--    
+                  <div class="news">
+                  	<h2>OTEVŘENÉ TVŮRČÍ ODPOLEDNE S RODIČI</h2>
+                  	<p class="date">8.10.2012</p>
+                  	<p>Podívejte se na seznam nadcházejících <a href="#" data-url="divadla" class="link">akcí</a></p>
+                  </div>  
+                  -->
+           
+                  
+                </div>
+            
+            
+            </div>
+            
+            
+            <div class="clear"></div>
+    </div><!--End of main_content-->
+
+
+
+<div class="footer">
+	<div class="footer_links">
+      <a href="#" data-url="skolka" class="link" >Mateřská škola sv. Voršily</a>
+    <a href="#" data-url="onas" class="link" >O nás</a>      
+    <a href="#" data-url="jidelna" class="link" >Školní jídelna</a>   
+	<a href="#" data-url="odkazy" class="link" >Odkazy</a>    
+
+ 
+    </div>
+    
+
+
+</div><!--End of footer-->
+    
+    
+</div><!--End of wrap-->
+
+
+
+</body>
+</html>
